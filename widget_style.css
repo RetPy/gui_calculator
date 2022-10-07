@@ -1,0 +1,54 @@
+QMainWindow{
+    background-color: black;
+    color: white;
+    min-width: 300px;
+    max-width: 300px;
+    min-height: 400px;
+    max-height: 400px;
+}
+QPushButton{
+    background-color: black;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    width: 75px;
+    height: 75px;
+}
+QPushButton:hover{
+    background-color: #202020;
+    color: white;
+}
+QPushButton:pressed{
+    background-color: #4e4e4e;
+}
+QLabel{
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 1px;
+    font-size: 30px;
+    min-width: 275px;
+    min-height: 70px;
+}
+QMessageBox{
+    background-color: black;
+    color: white;
+    min-width: 200px;
+    max-width: 200px;
+    min-height: 80px;
+    max-height: 80px;
+}
+QMessageBox QLabel{
+    background-color: black;
+    font-size: 20px;
+    border: 1px black;
+    margin-left: 15px;
+}
+QMessageBox QPushButton{
+    width: 80px;
+    height: 30px;
+    margin-left: 85px;
+    margin-right: 115px;
+    border: 1px solid white;
+}
