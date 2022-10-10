@@ -97,7 +97,7 @@ class MainWindow(QMainWindow):
             self.label.setText(text[:-1])
         elif symbol == '=':
             try:
-                if re.search(r'\d+\(', text):
+                if re.search(r'\d+\(', text):  # Нахождение по паттерну "цифры(" и последующая замена на "цифры*("
                     all_patt = re.findall(r'\d+\(', text)
                     for patt in all_patt:
                         new_patt = '{0}*('.format((re.findall(r"\d+", patt))[0])
