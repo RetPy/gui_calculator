@@ -1,3 +1,5 @@
+import re
+
 from PyQt6.QtWidgets import QMainWindow, QLabel, QPushButton, QGridLayout, QWidget, QApplication, QMessageBox
 
 
@@ -95,6 +97,11 @@ class MainWindow(QMainWindow):
             self.label.setText(text[:-1])
         elif symbol == '=':
             try:
+                if re.search(r'\d+\(', text):
+                    all_patt = re.findall(r'\d+\(', text)
+                    for patt in all_patt:
+                        new_patt = '{0}*('.format((re.findall(r"\d+", patt))[0])
+                        text = text.replace(patt, new_patt)
                 self.label.setNum(eval(text))
             except ZeroDivisionError:
                 zero_err = QMessageBox(self)
